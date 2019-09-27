@@ -1,0 +1,297 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tenderconsult</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+<!--
+
+Template 2075 Digital Team
+
+http://www.tooplate.com/view/2075-digital-team
+
+-->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/animate.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/et-line-font.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/nivo-lightbox.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/mystyle.css' %}" rel="stylesheet" />
+	<link href="{% static 'default.css/default.css' %}" rel="stylesheet" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+<!-- preloader section -->
+<div class="preloader">
+	<div class="sk-spinner sk-spinner-circle">
+       <div class="sk-circle1 sk-circle"></div>
+       <div class="sk-circle2 sk-circle"></div>
+       <div class="sk-circle3 sk-circle"></div>
+       <div class="sk-circle4 sk-circle"></div>
+       <div class="sk-circle5 sk-circle"></div>
+       <div class="sk-circle6 sk-circle"></div>
+       <div class="sk-circle7 sk-circle"></div>
+       <div class="sk-circle8 sk-circle"></div>
+       <div class="sk-circle9 sk-circle"></div>
+       <div class="sk-circle10 sk-circle"></div>
+       <div class="sk-circle11 sk-circle"></div>
+       <div class="sk-circle12 sk-circle"></div>
+    </div>
+</div>
+
+<!-- navigation section -->
+<section class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">Tenderconsult</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#home" class="smoothScroll">ДОМ</a></li>
+				<li><a href="#work" class="smoothScroll">УСЛУГИ</a></li>
+				<li><a href="#about" class="smoothScroll">О НАС</a></li>
+				<li><a href="#pricing" class="smoothScroll">ПАКЕТЫ УСЛУГ</a></li>
+				<li><a href="#contact" class="smoothScroll">КОНТАНТЫ</a></li>
+				<li><a href="#team" class="smoothScroll">TEAM</a></li>
+				<li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
+
+
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- home section -->
+<section id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h3> ЭФФЕКТИВНОСТЬ / НАДЁЖНОСТЬ / РЕЗУЛЬТАТ</h3>
+				<h1>ТЕНДЕРКОНСАЛТ</h1>
+				<hr>
+				<button type="button" class="smoothScroll btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Отправить заявку</button>
+				  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  					<div class="modal-dialog" role="document">
+    				  <div class="modal-content">
+      					<div class="modal-header">
+        				  <h5 class="modal-title" id="exampleModalLabel">Новая заявка</h5>
+        				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				    <span aria-hidden="true">&times;</span>
+						  </button>
+      					</div>
+      					<div class="modal-body">
+		 				   <form action="" method="post" class="wow fadeInUp" data-wow-delay="0.6s">
+							  {% csrf_token %}
+            				  {{ form.as_p}}
+							  <input type="submit" class="form-control" value="отправить запрос">
+         				   </form>
+      					</div>
+    				  </div>
+  					</div>
+				  </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% block usluga %}
+{%endblock%}
+
+
+<!-- about section -->
+{% block onas %}
+{%endblock%}
+
+<!-- pricing section -->
+{% block paket %}
+{%endblock%}
+
+
+
+<!-- team section
+<section id="team">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="section-title">
+					<strong>03</strong>
+					<h1 class="heading bold">TALENTED TEAM</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.9s">
+				<div class="team-wrapper">
+					<img src="/static/images/team1.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Cindy</h4>
+							<h3>Senior Designer</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.3s">
+				<div class="team-wrapper">
+					<img src="/static/images/team2.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Mary</h4>
+							<h3>Core Developer</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.6s">
+				<div class="team-wrapper">
+					<img src="/static/images/team3.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Linda</h4>
+							<h3>Manager</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.6s">
+				<div class="team-wrapper">
+					<img src="/static/images/team4.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Sandar</h4>
+							<h3>Accountant</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+-->
+<!-- portfolio section
+<div id="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="section-title">
+					<strong>04</strong>
+					<h1 class="heading bold">OUR PORTFOLIO</h1>
+					<hr>
+				</div>-->
+				<!-- ISO section
+				<div class="iso-section">
+					<ul class="filter-wrapper clearfix">
+                   		 <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
+                   		 <li><a href="#" class="opc-main-bg" data-filter=".html">HTML</a></li>
+                   		 <li><a href="#" class="opc-main-bg" data-filter=".photoshop">Photoshop</a></li>
+                    	 <li><a href="#" class="opc-main-bg" data-filter=".wordpress">Wordpress</a></li>
+                    	 <li><a href="#" class="opc-main-bg" data-filter=".mobile">Mobile</a></li>
+               		</ul>
+               		<div class="iso-box-section wow fadeIn" data-wow-delay="0.9s">
+               			<div class="iso-box-wrapper col4-iso-box">
+
+               				 <div class="iso-box html wordpress mobile col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="/static/images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img src="/static/images/portfolio-img1.jpg" alt="portfolio img"></a>
+               				 </div>
+
+               				 <div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="/static/images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img src="/static/images/portfolio-img2.jpg" alt="portfolio img"></a>
+               				 </div>
+
+               				 <div class="iso-box html mobile col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="/static/images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img src="/static/images/portfolio-img3.jpg" alt="portfolio img"></a>
+               				 </div>
+
+               				 <div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="/static/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img src="/static/images/portfolio-img4.jpg" alt="portfolio img"></a>
+               				 </div>
+
+               				 <div class="iso-box html photoshop col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="/static/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img src="/static/images/portfolio-img5.jpg" alt="portfolio img"></a>
+               				 </div>
+
+               				 <div class="iso-box photoshop col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="/static/images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img src="/static/images/portfolio-img6.jpg" alt="portfolio img"></a>
+               				 </div>
+
+               			</div>
+               		</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+-->
+{% block contact %}
+{%endblock%}
+{% block formzakaz %}
+{%endblock%}
+
+<!-- footer section -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<p>Сайт принадлежит ИП | Developer: <a href="#" target="_parent">I.Karabash</a></p>
+				<hr>
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+					<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+					<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+					<li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="0.9s"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/smoothscroll.js' %}"></script>
+<script src="{% static 'js/isotope.js' %}"></script>
+<script src="{% static 'js/imagesloaded.min.js' %}"></script>
+<script src="{% static 'js/nivo-lightbox.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/mys.js' %}"></script>
+
+
+
+</body>
+</html>
